@@ -6,18 +6,12 @@ import json
 import random
 import sys
 from tensorflow.python.framework import ops
-from flask import Flask, render_template, request
+
 from nltk.stem.lancaster import LancasterStemmer
 
 # Setting up global variables
 stemmer = LancasterStemmer()
-app = Flask(__name__)
-train = None
-for i in sys.argv[1:]:
-    if i.lower() == '--train':
-        train = True
-    else:
-        train = False
+
 
 # ------PRE-PROCESSING------- #
 
@@ -88,7 +82,7 @@ model = tflearn.DNN(net)
 
 # Training
 
-if train:
+if __name__ == "__main__":
     print("Training the model")
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
     model.save("Models/model.tflearn")
@@ -120,18 +114,3 @@ def get_response(inp):
             responses = tg['responses']
     return random.choice(responses)
 
-
-@app.route("/")
-def home():
-    return render_template("home.html")
-
-
-@app.route("/get")
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(get_response(userText))
-
-
-if not train:
-    if __name__ == "__main__":
-        app.run()
