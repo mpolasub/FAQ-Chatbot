@@ -4,7 +4,8 @@ import tflearn
 import nltk
 import json
 import random
-import sys
+from os import listdir
+from os.path import isfile, join
 from tensorflow.python.framework import ops
 
 from nltk.stem.lancaster import LancasterStemmer
@@ -15,10 +16,16 @@ stemmer = LancasterStemmer()
 
 # ------PRE-PROCESSING------- #
 
-# TODO: add support for loading multiple intent files
-with open('Data\intents.json') as f:
-    data = json.load(f)
-    f.close()
+onlyFiles = [f for f in listdir('Data/') if isfile(join('Data/', f))]
+
+lis = []
+for i in onlyFiles:
+    file = "Data/" + i
+    with open(file) as f:
+        data = json.load(f)
+        f.close()
+    lis = lis + data['intents']
+data['intents'] = lis
 
 # Tokenizing
 words = []
@@ -87,6 +94,7 @@ if __name__ == "__main__":
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
     model.save("Models/model.tflearn")
 else:
+    print("Loading the model")
     model.load("Models/model.tflearn")
 
 

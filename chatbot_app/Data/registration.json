@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "tag": "CHANGE_THIS",
+      "patterns": [
+        "CHANGE_THIS",
+        "CHANGE_THIS",
+        "CHANGE_THIS",
+        "CHANGE_THIS",
+        "CHANGE_THIS"
+      ],
+      "responses": [
+        "CHANGE_THIS",
+        "CHANGE_THIS",
+        "CHANGE_THIS"
+      ]
+    }
+  ]
+}
