@@ -13,8 +13,7 @@
         "Hello, thanks for visiting",
         "Good to see you again",
         "Hi there, how can I help?"
-      ],
-      "context_set": ""
+      ]
     },
     {
       "tag": "goodbye",
@@ -123,39 +122,7 @@
         "who is your daddy"
       ],
       "responses": [
-        "That would be you Mr. Vishal",
-        "I was created by Mr. Vishal",
-        "Mr. vishal is my creator"
-      ]
-    },
-    {
-      "tag": "myself",
-      "patterns": [
-        "Tell me about Mr. Vishal?",
-        "Who is Mr. Vishal",
-        "Mr. vishal profile",
-        "Mr. Vishal details"
-      ],
-      "responses": [
-        "A very intelligent being who created me",
-        "My creator, and he is a really intelligent man",
-        "A wise and intelligent man"
-      ]
-    },
-    {
-      "tag": "God",
-      "patterns": [
-        "Do you know god?",
-        "Who is god",
-        "Can you tell me anything about god",
-        "does god exists?",
-        "is there a god?"
-      ],
-      "responses": [
-        "god hunnnnn, let me think may be next time i can answer that ",
-        "I don't, as i was not created by a human",
-        "Wait i need to ask that to my creator",
-        "i'm not sure right now"
+        "I am a product of BHS ML Club"
       ]
     },
     {
