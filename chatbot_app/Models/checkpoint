@@ -1,2 +1,2 @@
-model_checkpoint_path: "X:\\Projects\\BHS-ML _Club\\FAQ-Chatbot\\chatbot_app\\Models\\model.tflearn"
-all_model_checkpoint_paths: "X:\\Projects\\BHS-ML _Club\\FAQ-Chatbot\\chatbot_app\\Models\\model.tflearn"
+model_checkpoint_path: "X:\\Projects\\BHS-ML_Club\\FAQ-Chatbot\\chatbot_app\\Models\\model.tflearn"
+all_model_checkpoint_paths: "X:\\Projects\\BHS-ML_Club\\FAQ-Chatbot\\chatbot_app\\Models\\model.tflearn"
