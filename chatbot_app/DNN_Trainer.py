@@ -7,16 +7,22 @@ import random
 from os import listdir
 from os.path import isfile, join
 from tensorflow.python.framework import ops
-
 from nltk.stem.lancaster import LancasterStemmer
+from configparser import ConfigParser
 
 # Setting up global variables
 stemmer = LancasterStemmer()
+parser = ConfigParser()
+parser.read('config.ini')
 
+DataFolder = parser.get('files', 'intents_Directory')
+model_name = parser.get('files', 'model_file_name')
+epochs = parser.getint('ML_variables', 'epochs')
+activator = parser.get('ML_variables', 'activation')
 
 # ------PRE-PROCESSING------- #
 
-onlyFiles = [f for f in listdir('Data/') if isfile(join('Data/', f))]
+onlyFiles = [f for f in listdir(DataFolder) if isfile(join(DataFolder, f))]
 
 lis = []
 for i in onlyFiles:
@@ -46,7 +52,6 @@ for intent in data['intents']:
 # Word Stemming
 words = [stemmer.stem(w.lower()) for w in words if w != "?"]
 words = sorted(list(set(words)))
-
 labels = sorted(labels)
 
 # Bag of words
@@ -80,8 +85,9 @@ output = numpy.array(output)
 ops.reset_default_graph()
 
 net = tflearn.input_data(shape=[None, len(training[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 8, activation=activator)
+net = tflearn.fully_connected(net, 8, activation=activator)
+net = tflearn.fully_connected(net, 8, activation=activator)
 net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
 net = tflearn.regression(net)
 
@@ -91,17 +97,16 @@ model = tflearn.DNN(net)
 
 if __name__ == "__main__":
     print("Training the model")
-    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("Models/model.tflearn")
+    model.fit(training, output, n_epoch=epochs, batch_size=8, show_metric=True)
+    model.save(model_name)
 else:
     print("Loading the model")
-    model.load("Models/model.tflearn")
+    model.load(model_name)
 
 
 # ----- USING THE MODEL ----- #
 
 def get_response(inp):
-
     # Develop a bag of words with the input
     bag = [0 for _ in range(len(words))]
     s_words = nltk.word_tokenize(inp)
@@ -114,11 +119,14 @@ def get_response(inp):
     bag_of_words = numpy.array(bag)
 
     # Get results using the bag of words
-    results = model.predict([bag_of_words])
+    results = model.predict([bag_of_words])[0]
     results_index = numpy.argmax(results)
     tag = labels[results_index]
-    for tg in data["intents"]:
-        if tg['tag'] == tag:
-            responses = tg['responses']
-    return random.choice(responses)
 
+    if results[results_index] > 0.75:
+        for tg in data["intents"]:
+            if tg['tag'] == tag:
+                responses = tg['responses']
+        return random.choice(responses)
+    else:
+        return "I didn't get that, try again!"
