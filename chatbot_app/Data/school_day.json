@@ -1,18 +1,106 @@
 {
   "intents": [
     {
-      "tag": "CHANGE_THIS",
+      "tag": "calendar",
       "patterns": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "What are the school holidays this year?",
+        "School holidays?",
+        "where is the calendar?"
       ],
       "responses": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "Holidays are listed on the calendar page at https://bsd405.org/about/calendar/",
+        "Here is our school calendar : https://bsd405.org/about/calendar/"
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "When does the school start?",
+        "When does the school end?",
+        "What is the school timeing?"
+      ],
+      "responses": [
+        "Times vary by school.  Visit your school’s website for more information.",
+        "School times vary, Visit your school’s website for more information."
+      ]
+    },
+    {
+      "tag": "Bus",
+      "patterns": [
+        "What time does my bus come?",
+        "Where is my school bus?",
+        "Bus schedule"
+      ],
+      "responses": [
+        "Bus schedules are available online at https://bsd405.org/departments/transportation/bus-routes/",
+        "You can access that information on our Transportation Services page at https://bsd405.org/departments/transportation/bus-routes/"
+      ]
+    },
+    {
+      "tag": "lunch",
+      "patterns": [
+        "What is for lunch today?",
+        "lunch menu",
+        "What can i eat today?"
+      ],
+      "responses": [
+        "School lunch menus are available online at https://bsd405.org/services/nutrition-services/lunch/ ",
+        "You can access them on our Nutrition Services page. at https://bsd405.org/services/nutrition-services/lunch/"
+      ]
+    },
+    {
+      "tag": "medical",
+      "patterns": [
+        "How can i contact the school nurse?",
+        "I want to talk to the nurse",
+        "Health Services"
+      ],
+      "responses": [
+        "School Nurse information is available at http://bsd405.org/departments/health/",
+        "Health information at http://bsd405.org/departments/health/"
+      ]
+    },
+    {
+      "tag": "snow",
+      "patterns": [
+        "Will there be school in the morning? It is snowing.",
+        "It is snowing, will there be school tomorrow"
+      ],
+      "responses": [
+        "You can get up-to-date information about school closures on our website under Emergency Closure Information, by signing up for District Email Notification or School Messenger, or by calling the 24-hour Newsline at 425-456-4111.",
+        "To get up-to-date info by signing up for District Email Notification or School Messenger, or by calling the 24-hour Newsline at 425-456-4111"
+      ]
+    },
+    {
+      "tag": "graduation",
+      "patterns": [
+        "What are the graduation requirements?",
+        "What are the requirements needed to graduate?"
+      ],
+      "responses": [
+        "High School graduation requirement information can be found on https://bsd405.org/about/resources/graduation-requirements/",
+        "Head to the Graduation requirements page at https://bsd405.org/about/resources/graduation-requirements/"
+      ]
+    },
+    {
+      "tag": "behavior",
+      "patterns": [
+        "Who can i talk to about my child's behavior?",
+        "I'm unhappy with something at my child's school, who can i talk to?"
+      ],
+      "responses": [
+        "Start with your child’s teacher.  After talking with the teacher, if you still have concerns, contact the school principal.  If you disagree with the principal’s decision, discuss it with the principal, then contact the Director of School Support at (425) 456-4109."
+      ]
+    },
+    {
+      "tag": "safety",
+      "patterns": [
+        "I'm concerned about my child's safety",
+        "Who can i talk to about my child's safety?",
+        "How do i report a threat of violence or weapons on campus?"
+      ],
+      "responses": [
+        "Our district uses SafeSchools Alert, a tip reporting service that allows students, staff and parents to submit safety concerns to our administration four different ways: \n Phone: 425-324-3875 \n Text #1177 @tip + your tip to ALERT1 or 253781 \n Email 1177@alert1.us \n Fill out a report at http://1177.alert1.us"
       ]
     }
   ]
