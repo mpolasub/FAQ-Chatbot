@@ -7,21 +7,21 @@
         "How do I get my public records?",
         "Where do I contact for my public records?",
         "Can I get my public records?",
-	"Who do I contact for my public records?",
+        "Who do I contact for my public records?"
       ],
       "responses": [
         "Please send an email to publicrecords@bsd405.org or call (425) 456-4101 to request public records.",
         "Please call (425) 456-4101 to or send an email to publicrecords@bsd405.org for more information on public records.",
         "Please send an email to publicrecords@bsd405.org or call (425) 456-4101 to for more information on public records."
       ]
-    }
+    },
     {
       "tag": "transcript",
       "patterns": [
         "How do I get a copy of my transcript?",
         "Where do I find my transcript?",
         "Who do I contact for my transcipt?",
-        "How do I request a transcript?",
+        "How do I request a transcript?"
       ],
       "responses": [
         "If you are a current student, contact your registrar or counselor. For graduates, visit the records office at 12011 NE 1st Street Bellevue, WA 98005 or call 425-456-4150.",

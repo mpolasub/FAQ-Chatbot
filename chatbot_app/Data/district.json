@@ -8,8 +8,8 @@
         "What are the policy changes?",
         "What are the challenges faced by the district?",
         "Is the district facing any challenges?",
-	"Are there any district events?",
-	"Are there any policy changes?"
+        "Are there any district events?",
+        "Are there any policy changes?"
       ],
       "responses": [
         "Please visit the Policies and Procedures page: https://bsd405.org/about/policies-procedures/",
@@ -24,7 +24,7 @@
         "What is the ethnic composition of enrolled students at the school district?",
         "What are the ethnicities of the enrolled students at Bellevue School District?",
         "Enrollment information",
-	"What kinds of students are enrolled?"
+        "What kinds of students are enrolled?"
       ],
       "responses": [
         "Please visit the About page: https://bsd405.org/about/",
@@ -39,10 +39,10 @@
         "Schools in the district?",
         "Bellevue schools",
         "information about individual schools",
-	"schools in district",
-	"High school",
-	"Elementary school",
-	"Middle school"
+        "schools in district",
+        "High school",
+        "Elementary school",
+        "Middle school"
       ],
       "responses": [
         "You can visit the Schools page to find information about all our schools: https://bsd405.org/schools/",
@@ -56,10 +56,10 @@
         "are there translators",
         "my child does not speak english",
         "can I use translator",
-	"are translators allowed",
-	"english is not first language",
-	"we do not speak english well",
-	"my english is not good"
+        "are translators allowed",
+        "english is not first language",
+        "we do not speak english well",
+        "my english is not good"
       ],
       "responses": [
         "Parents should call their school to request a translator for school conferences or when they have general questions about the District."

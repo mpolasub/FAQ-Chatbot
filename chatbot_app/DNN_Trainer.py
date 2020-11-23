@@ -27,6 +27,7 @@ onlyFiles = [f for f in listdir(DataFolder) if isfile(join(DataFolder, f))]
 lis = []
 for i in onlyFiles:
     file = "Data/" + i
+    print(f"Loading {file}")
     with open(file) as f:
         data = json.load(f)
         f.close()
