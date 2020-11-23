@@ -1,18 +1,114 @@
 {
   "intents": [
     {
-      "tag": "CHANGE_THIS",
+      "tag": "district events",
       "patterns": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "How can I stay informed about District events, proposed policy changes and current challenges facing the district?",
+        "What are the district events?",
+        "What are the policy changes?",
+        "What are the challenges faced by the district?",
+        "Is the district facing any challenges?",
+	"Are there any district events?",
+	"Are there any policy changes?"
       ],
       "responses": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "Please visit the Policies and Procedures page: https://bsd405.org/about/policies-procedures/",
+        "Please go to the Policies and Procedures page: https://bsd405.org/about/policies-procedures/"
+      ]
+    },
+    {
+      "tag": "district enrollment",
+      "patterns": [
+        "What is the district enrollment and ethnic breakdown?",
+        "What are the ethnicities in the school district?",
+        "What is the ethnic composition of enrolled students at the school district?",
+        "What are the ethnicities of the enrolled students at Bellevue School District?",
+        "Enrollment information",
+	"What kinds of students are enrolled?"
+      ],
+      "responses": [
+        "Please visit the About page: https://bsd405.org/about/",
+        "Please go to the About page: https://bsd405.org/about/"
+      ]
+    },
+    {
+      "tag": "schools",
+      "patterns": [
+        "Where do I get more information about the district and individual schools?",
+        "What are the schools?",
+        "Schools in the district?",
+        "Bellevue schools",
+        "information about individual schools",
+	"schools in district",
+	"High school",
+	"Elementary school",
+	"Middle school"
+      ],
+      "responses": [
+        "You can visit the Schools page to find information about all our schools: https://bsd405.org/schools/",
+        "Please go to the schools page: https://bsd405.org/schools/"
+      ]
+    },
+    {
+      "tag": "non-english",
+      "patterns": [
+        "I do not speak english",
+        "are there translators",
+        "my child does not speak english",
+        "can I use translator",
+	"are translators allowed",
+	"english is not first language",
+	"we do not speak english well",
+	"my english is not good"
+      ],
+      "responses": [
+        "Parents should call their school to request a translator for school conferences or when they have general questions about the District."
+      ]
+    },
+    {
+      "tag": "superintendent",
+      "patterns": [
+        "who is the superintendent?",
+        "superintendent",
+        "bsd superintendent",
+        "bellevue high school superintendent"
+      ],
+      "responses": [
+        "The current superintendent is Ivan Duran, to learn more visit this link https://bsd405.org/about/superintendent/"
+      ]
+    },
+    {
+      "tag": "contacting staff",
+      "patterns": [
+        "How do I contact the administrative and support offices?",
+        "contact staff",
+        "contact info",
+        "staff email"
+      ],
+      "responses": [
+        "In order to find staff email please go to this link https://bsd405.org/help/staff/ and search their name"
+      ]
+    },
+    {
+      "tag": "board meetings",
+      "patterns": [
+        "when is the next school board meeting?",
+        "school board meeting",
+        "board meeting"
+      ],
+      "responses": [
+        "Regular meetings are held on the first and third Tuesday of each month, beginning at 4:30 pm. To get more detailed information visit this site https://go.boarddocs.com/wa/bsd405/Board.nsf/Public"
+      ]
+    },
+    {
+      "tag": "board members",
+      "patterns": [
+        "school board members",
+        "who are the school board members and how can I contact them?",
+        "contact info for school board members"
+      ],
+      "responses": [
+        "You can find the school board members and find their contact info at this page https://bsd405.org/about/school-board/"
       ]
     }
   ]
