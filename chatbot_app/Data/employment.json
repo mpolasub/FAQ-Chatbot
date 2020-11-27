@@ -1,18 +1,18 @@
 {
   "intents": [
     {
-      "tag": "CHANGE_THIS",
+      "tag": "employment",
       "patterns": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "Is the Bellevue School District hiring?",
+        "Job openings in Bellevue School District",
+        "What jobs are offered at Bellevue School District?",
+        "Where can i apply for a position?",
+        "Open positions"
+
       ],
       "responses": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "Call our Job Hotline at 425-456-6044 for information on job openings. Visit https://bsd405.org/departments/hr/ to apply for a position.",
+        "Visit https://bsd405.org/departments/hr/ to view job postings and apply for a position. Call 425-456-6044 for a list of job openings."
       ]
     }
   ]
