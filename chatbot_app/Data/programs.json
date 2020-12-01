@@ -1,18 +1,78 @@
 {
   "intents": [
     {
-      "tag": "CHANGE_THIS",
+      "tag": "Spanish immersion program",
       "patterns": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "How can i find out more about the District's Spanish Immersion program?",
+        "Spanish Immersion program",
+        "Immersion program"
       ],
       "responses": [
-        "CHANGE_THIS",
-        "CHANGE_THIS",
-        "CHANGE_THIS"
+        "Currently there are three school participating in the Spanish Immersion program, Puesta del Sol Elementary, Tillicum Middle School, and Newport high school, you can contact any of the to learn more"
+      ]
+    },
+    {
+      "tag": "CTE",
+      "patterns": [
+        "Do you have Career and Technical Education programs?",
+        "CTE programs",
+        "Career and Technical Education"
+      ],
+      "responses": [
+        "Yes we do offer CTE classes, to get more info contact the CTE office at 425-456-4181"
+      ]
+    },
+    {
+      "tag": "driver training",
+      "patterns": [
+        "Does the district offer driver training",
+        "driver training",
+        "bus driver training"
+      ],
+      "responses": [
+        "No, not at this time"
+      ]
+    },
+    {
+      "tag": "Second_Language",
+      "patterns": [
+        "Does the district have a program to assist students who are English-as-a-Second-Language Learners?",
+        "Program for english learners",
+        "is there program for english as second language learners?",
+        "does district offer english second language program"
+      ],
+      "responses": [
+        "ESL/ELL classes are offered at a number of our schools.  For more information, contact our ELL Program Office at 425-456-4135 or visit https://bsd405.org/services/english-language-learners/"
+      ]
+    },
+    {
+      "tag": "Gifted_Program",
+      "patterns": [
+        "How can i find out more about the Gifted Program?",
+        "Gifted Program",
+        "How to get into gifted program",
+        "Gifted program test",
+        "Gifted program information",
+        "Gifted program test dates"
+      ],
+      "responses": [
+        "You can call the Gifted Education office at 425-456-4136 or visit https://bsd405.org/2018/08/gifted-program-becomes-advanced-learning-services/ for more information"
+      ]
+    },
+    {
+      "tag": "IB",
+      "patterns": [
+        "How do I find out more about the International Baccalaureate (IB) Program?",
+        "What is International Baccalaureate program?",
+        "information about International Baccalaureate",
+        "What is IB program?",
+        "information about IB program",
+        "how to get into International Baccalaureate program",
+        "how to get into IB program"
+      ],
+      "responses": [
+        "Visit the Interlake High School website for more information: https://bsd405.org/interlake/",
+        "Contact Interlake High School at https://bsd405.org/interlake/"
       ]
     }
   ]

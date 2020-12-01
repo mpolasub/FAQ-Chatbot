@@ -9,6 +9,7 @@ from os.path import isfile, join
 from tensorflow.python.framework import ops
 from nltk.stem.lancaster import LancasterStemmer
 from configparser import ConfigParser
+from tqdm import tqdm
 
 # Setting up global variables
 stemmer = LancasterStemmer()
@@ -21,26 +22,31 @@ epochs = parser.getint('ML_variables', 'epochs')
 activator = parser.get('ML_variables', 'activation')
 
 # ------PRE-PROCESSING------- #
-
+print("--------------------")
+print("|Loading intents...|")
+print("--------------------")
 onlyFiles = [f for f in listdir(DataFolder) if isfile(join(DataFolder, f))]
 
 lis = []
-for i in onlyFiles:
+for i in tqdm(onlyFiles):
     file = "Data/" + i
-    print(f"Loading {file}")
     with open(file) as f:
         data = json.load(f)
         f.close()
     lis = lis + data['intents']
 data['intents'] = lis
 
+
 # Tokenizing
+print("--------------------")
+print("|Tokenizing Data...|")
+print("--------------------")
+
 words = []
 labels = []
 docs_x = []
 docs_y = []
-
-for intent in data['intents']:
+for intent in tqdm(data['intents']):
     for pattern in intent['patterns']:
         wrds = nltk.word_tokenize(pattern)
         words.extend(wrds)
@@ -56,12 +62,16 @@ words = sorted(list(set(words)))
 labels = sorted(labels)
 
 # Bag of words
+print("----------------------------")
+print("|Generating Bag Of Words...|")
+print("----------------------------")
+
 training = []
 output = []
 
 out_empty = [0 for _ in range(len(labels))]
 
-for x, doc in enumerate(docs_x):
+for x, doc in tqdm(enumerate(docs_x)):
     bag = []
     wrds = [stemmer.stem(w.lower()) for w in doc]
 
